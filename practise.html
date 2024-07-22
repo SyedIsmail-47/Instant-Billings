@@ -1,0 +1,123 @@
+
+
+
+<!-- Code For COntact Form  -->
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .contact-section {
+            width: 80%;
+            margin-left: 10%;
+            margin-right: 10%;
+            margin: 2rem auto;
+            padding: 2rem;
+        }
+
+        .contact-section h2 {
+            padding: 25px;
+            font-size: 35px;
+            text-align: center;
+            color: #002750;
+            margin-bottom: 1rem;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .form-group {
+            font-size: 16px;
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border: none;
+            border-bottom: 2px solid #ccc;
+            font-size: 1rem;
+            transition: border-bottom-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-bottom-color: #333;
+            outline: none;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #999;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .submit-btn {
+            padding: 15px;
+            width: 250px;
+            background-color: #ff6600;
+            color: #fff;
+            border: none;
+            border-radius: 1px;
+            font-size: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #e55c00;
+        }
+
+        @media (max-width: 768px) {
+            .form-group {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="contact-section">
+        <h2>Schedule Your Free Consultation Today</h2>
+        <form class="contact-form">
+            <div class="form-group">
+                <input type="text" id="full-name" name="full-name" placeholder="Full Name" required>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <input type="tel" id="phone" name="phone" placeholder="Phone" required>
+            </div>
+            <br>
+            <div class="form-group">
+                <input type="text" id="practice-name" name="practice-name" placeholder="Practice Name" required>
+                <input type="text" id="location" name="location" placeholder="Location" required>
+            </div>
+            <div class="form-group">
+                <input type="text" id="job-function" name="job-function" placeholder="Job Function" required>
+                <input type="text" id="website" name="website" placeholder="Website" required>
+            </div>
+            <div class="form-group">
+                <textarea id="message" name="message" placeholder="Message" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html> 
